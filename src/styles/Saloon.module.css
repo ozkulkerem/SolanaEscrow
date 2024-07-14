@@ -1,0 +1,171 @@
+.saloon {
+    width: 100vw;
+    height: 100vh;
+    background-color: #d2691e;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .floor {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(60deg);
+    transform-origin: bottom;
+  }
+  
+  .bar {
+    width: 1200px;
+    height: 180px;
+    position: absolute;
+    bottom: 45%;
+    z-index: 1;
+    background-repeat: repeat;
+  }
+  
+  .character {
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .barman {
+    width: 140px;
+    height: 280px;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 0;
+  }
+  
+  .women {
+    width: 180px;
+    height: 360px;
+    bottom: 40%;
+    left: 70%;
+  }
+  
+  .seriff {
+    width: 190px;
+    height: 380px;
+    bottom: 28%;
+    left: 10%;
+  }
+  
+  .customer1 {
+    width: 200px;
+    height: 400px;
+    bottom: 30%;
+    left: 20%;
+  }
+  
+  .customer2 {
+    width: 150px;
+    height: 300px;
+    bottom: 35%;
+    right: 35%;
+    width: 228px;
+  }
+  
+  .piano {
+    width: 300px;
+    height: 300px;
+    bottom: 42%;
+    right: 1%;
+    z-index: 1;
+  }
+  
+  .hideable {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .wall {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: 42%;
+    background-repeat: repeat;
+    transform: rotateX(10deg);
+    transform-origin: bottom;
+    z-index: -1;
+  }
+  
+  .cabinet {
+    position: absolute;
+    width: 121px;
+    height: 80px;
+    bottom: 65%;
+    left: 5%;
+    transform: rotateX(10deg) rotateY(-5deg);
+    z-index: 1;
+  }
+  
+  .accessory1 {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    bottom: 80%;
+    right: 30%;
+    transform: rotateX(10deg) rotateY(5deg);
+    z-index: 0;
+  }
+  
+  .accessory2 {
+    position: absolute;
+    width: 200px;
+    height: 70px;
+    bottom: 80%;
+    left: 20%;
+    transform: rotateX(10deg) rotateY(5deg);
+    z-index: 0;
+  }
+  
+  .alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f0e68c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  /* Medya sorguları */
+  @media screen and (max-width: 1200px) {
+    .hideable {
+      opacity: 1;
+    }
+    .piano {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .hideable {
+      opacity: 0;
+    }
+    .piano {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .hideable {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    .barman {
+      opacity: 1;
+      visibility: visible;
+    }
+    .piano {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
